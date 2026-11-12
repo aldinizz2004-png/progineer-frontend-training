@@ -58,6 +58,11 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
   padding: 1rem 1.5rem;
   color: #ffffff;
   background: var(--ink);
@@ -70,14 +75,11 @@ a:hover {
 }
 
 .site-header nav ul {
-  margin: 0.5rem 0 0;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.site-header nav li {
-  display: inline-block;
-  margin-right: 1.25rem;
 }
 
 .site-header nav a {
@@ -115,6 +117,10 @@ main > section {
 }
 
 .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -145,6 +151,9 @@ main > section {
 }
 
 .feed li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
   padding: 0.6rem 0.75rem;
 }
 
@@ -187,6 +196,10 @@ main > section {
 }
 
 .candidate-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
   margin-bottom: 0.75rem;
 }
 
@@ -397,6 +410,12 @@ button:hover {
   border-color: var(--accent);
 }
 
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .form-actions button + button {
   margin-left: 0.5rem;
 }
@@ -515,4 +534,32 @@ footer a {
 
 .feed {
   grid-area: feed;
+}
+
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "sidebar"
+      "trainees"
+      "evaluations"
+      "form"
+      "feed";
+  }
+
+  .sidebar,
+  .feed {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+
+  main {
+    gap: 1rem;
+    padding: 0.75rem;
+  }
 }
