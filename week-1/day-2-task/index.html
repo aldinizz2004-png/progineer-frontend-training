@@ -172,6 +172,101 @@
       </table>
     </section>
 
+    <section id="new-evaluation" aria-labelledby="form-title">
+      <header class="section-header">
+        <h2 id="form-title">New Evaluation</h2>
+      </header>
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Trainee and Evaluator</legend>
+
+          <p>
+            <label for="trainee">Trainee</label>
+            <select id="trainee" name="trainee" required>
+              <option value="">-- Select a trainee --</option>
+              <option value="lina">Lina Haddad</option>
+              <option value="omar">Omar Nasser</option>
+              <option value="sara">Sara Khalil</option>
+              <option value="yousef">Yousef Amer</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="evaluator-name">Evaluator Name</label>
+            <input type="text" id="evaluator-name" name="evaluator_name"
+                   required minlength="3" maxlength="60" autocomplete="name">
+          </p>
+
+          <p>
+            <label for="evaluator-email">Evaluator Email</label>
+            <input type="email" id="evaluator-email" name="evaluator_email"
+                   required autocomplete="email">
+          </p>
+
+          <p>
+            <label for="evaluation-date">Evaluation Date</label>
+            <input type="date" id="evaluation-date" name="evaluation_date" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Scores (0 to 100)</legend>
+
+          <p>
+            <label for="score-technical">Technical</label>
+            <input type="number" id="score-technical" name="score_technical"
+                   required min="0" max="100">
+          </p>
+
+          <p>
+            <label for="score-problem">Problem Solving</label>
+            <input type="number" id="score-problem" name="score_problem"
+                   required min="0" max="100">
+          </p>
+
+          <p>
+            <label for="score-communication">Communication</label>
+            <input type="number" id="score-communication" name="score_communication"
+                   required min="0" max="100">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Recommendation</legend>
+
+          <p>
+            <input type="radio" id="rec-passed" name="recommendation" value="passed" required>
+            <label for="rec-passed">Pass</label>
+          </p>
+          <p>
+            <input type="radio" id="rec-review" name="recommendation" value="review">
+            <label for="rec-review">Needs review</label>
+          </p>
+          <p>
+            <input type="radio" id="rec-improve" name="recommendation" value="improve">
+            <label for="rec-improve">Needs improvement</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comments</legend>
+
+          <p>
+            <label for="comments">Evaluation Notes</label>
+            <textarea id="comments" name="comments" rows="5"
+                      required minlength="20" maxlength="500"></textarea>
+          </p>
+        </fieldset>
+
+        <p class="form-actions">
+          <button type="submit">Submit Evaluation</button>
+          <button type="reset">Reset</button>
+        </p>
+
+      </form>
+    </section>
+
     <aside class="feed" aria-labelledby="feed-title">
       <h2 id="feed-title">Recent Activity</h2>
       <ol>
