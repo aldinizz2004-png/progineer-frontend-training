@@ -135,6 +135,63 @@
           </p>
         </fieldset>
 
+        <fieldset>
+          <legend>Professional Details</legend>
+
+          <p>
+            <label for="position">Applying For</label>
+            <select id="position" name="position" required>
+              <option value="">-- Select a position --</option>
+              <option value="backend">Backend Software Engineer</option>
+              <option value="frontend">Frontend Software Engineer</option>
+              <option value="fullstack">Full-Stack Engineer</option>
+              <option value="qa">QA Engineer</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Years of Experience</legend>
+            <p>
+              <input type="radio" id="exp-none" name="experience" value="0-1" required>
+              <label for="exp-none">Less than 1 year</label>
+            </p>
+            <p>
+              <input type="radio" id="exp-junior" name="experience" value="1-3">
+              <label for="exp-junior">1 to 3 years</label>
+            </p>
+            <p>
+              <input type="radio" id="exp-mid" name="experience" value="3-5">
+              <label for="exp-mid">3 to 5 years</label>
+            </p>
+            <p>
+              <input type="radio" id="exp-senior" name="experience" value="5+">
+              <label for="exp-senior">More than 5 years</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="cover-letter">Cover Letter</label>
+            <textarea id="cover-letter" name="cover_letter"
+                      rows="5" cols="40"
+                      required minlength="30" maxlength="500"></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Documents</legend>
+
+          <p>
+            <label for="resume">Resume (PDF only)</label>
+            <input type="file" id="resume" name="resume"
+                   accept="application/pdf,.pdf" required>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">I confirm that the information provided is accurate.</label>
+        </p>
+
         <p>
           <button type="submit">Submit Application</button>
           <button type="reset">Reset Form</button>
