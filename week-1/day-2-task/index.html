@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Evaluation Dashboard | ProGineer Technologies</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Technical Evaluation Dashboard</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#trainees">Trainees</a></li>
+        <li><a href="#evaluations">Evaluations</a></li>
+        <li><a href="#new-evaluation">New Evaluation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <aside class="sidebar" aria-labelledby="summary-title">
+      <h2 id="summary-title">Cohort Summary</h2>
+      <dl>
+        <dt>Total trainees</dt>
+        <dd>4</dd>
+        <dt>Passed</dt>
+        <dd>2</dd>
+        <dt>In review</dt>
+        <dd>1</dd>
+        <dt>Needs improvement</dt>
+        <dd>1</dd>
+        <dt>Average overall score</dt>
+        <dd>76</dd>
+      </dl>
+    </aside>
+
+    <section id="trainees" aria-labelledby="trainees-title">
+      <header class="section-header">
+        <h2 id="trainees-title">Trainee Evaluation Cards</h2>
+        <p>4 trainees</p>
+      </header>
+
+      <article class="candidate-card" data-status="passed">
+        <p class="badge" data-status="passed">Passed</p>
+        <header>
+          <h3>Lina Haddad</h3>
+          <p>Backend Engineering</p>
+        </header>
+        <dl>
+          <dt>Overall score</dt>
+          <dd>88 / 100</dd>
+          <dt>Reviewer</dt>
+          <dd>Rami Odeh</dd>
+        </dl>
+        <a href="#candidate-lina" aria-label="View details for Lina Haddad">View details</a>
+      </article>
+
+      <article class="candidate-card" data-status="passed">
+        <p class="badge" data-status="passed">Passed</p>
+        <header>
+          <h3>Omar Nasser</h3>
+          <p>Frontend Engineering</p>
+        </header>
+        <dl>
+          <dt>Overall score</dt>
+          <dd>80 / 100</dd>
+          <dt>Reviewer</dt>
+          <dd>Dana Rashid</dd>
+        </dl>
+        <a href="#candidate-omar" aria-label="View details for Omar Nasser">View details</a>
+      </article>
+
+      <article class="candidate-card" data-status="review">
+        <p class="badge" data-status="review">In review</p>
+        <header>
+          <h3>Sara Khalil</h3>
+          <p>Quality Assurance</p>
+        </header>
+        <dl>
+          <dt>Overall score</dt>
+          <dd>73 / 100</dd>
+          <dt>Reviewer</dt>
+          <dd>Rami Odeh</dd>
+        </dl>
+        <a href="#candidate-sara" aria-label="View details for Sara Khalil">View details</a>
+      </article>
+
+      <article class="candidate-card" data-status="improve">
+        <p class="badge" data-status="improve">Needs improvement</p>
+        <header>
+          <h3>Yousef Amer</h3>
+          <p>Backend Engineering</p>
+        </header>
+        <dl>
+          <dt>Overall score</dt>
+          <dd>63 / 100</dd>
+          <dt>Reviewer</dt>
+          <dd>Dana Rashid</dd>
+        </dl>
+        <a href="#candidate-yousef" aria-label="View details for Yousef Amer">View details</a>
+      </article>
+    </section>
+
+    <section id="evaluations" aria-labelledby="evaluations-title">
+      <header class="section-header">
+        <h2 id="evaluations-title">Candidate Evaluation Table</h2>
+      </header>
+      <table>
+        <caption>Candidate evaluation scores out of 100</caption>
+        <thead>
+          <tr>
+            <th scope="col">Candidate</th>
+            <th scope="col">Track</th>
+            <th scope="col">Technical</th>
+            <th scope="col">Problem Solving</th>
+            <th scope="col">Communication</th>
+            <th scope="col">Overall</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lina Haddad</th>
+            <td>Backend Engineering</td>
+            <td>90</td>
+            <td>85</td>
+            <td>88</td>
+            <td>88</td>
+            <td data-status="passed">Passed</td>
+          </tr>
+          <tr>
+            <th scope="row">Omar Nasser</th>
+            <td>Frontend Engineering</td>
+            <td>82</td>
+            <td>78</td>
+            <td>80</td>
+            <td>80</td>
+            <td data-status="passed">Passed</td>
+          </tr>
+          <tr>
+            <th scope="row">Sara Khalil</th>
+            <td>Quality Assurance</td>
+            <td>70</td>
+            <td>74</td>
+            <td>76</td>
+            <td>73</td>
+            <td data-status="review">In review</td>
+          </tr>
+          <tr>
+            <th scope="row">Yousef Amer</th>
+            <td>Backend Engineering</td>
+            <td>60</td>
+            <td>66</td>
+            <td>64</td>
+            <td>63</td>
+            <td data-status="improve">Needs improvement</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">Cohort average</th>
+            <td>All tracks</td>
+            <td>75.5</td>
+            <td>75.8</td>
+            <td>77</td>
+            <td>76</td>
+            <td>-</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section id="new-evaluation" aria-labelledby="form-title">
+      <header class="section-header">
+        <h2 id="form-title">New Evaluation</h2>
+      </header>
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Trainee and Evaluator</legend>
+
+          <p>
+            <label for="trainee">Trainee</label>
+            <select id="trainee" name="trainee" required>
+              <option value="">-- Select a trainee --</option>
+              <option value="lina">Lina Haddad</option>
+              <option value="omar">Omar Nasser</option>
+              <option value="sara">Sara Khalil</option>
+              <option value="yousef">Yousef Amer</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="evaluator-name">Evaluator Name</label>
+            <input type="text" id="evaluator-name" name="evaluator_name"
+                   required minlength="3" maxlength="60" autocomplete="name">
+          </p>
+
+          <p>
+            <label for="evaluator-email">Evaluator Email</label>
+            <input type="email" id="evaluator-email" name="evaluator_email"
+                   required autocomplete="email">
+          </p>
+
+          <p>
+            <label for="evaluation-date">Evaluation Date</label>
+            <input type="date" id="evaluation-date" name="evaluation_date" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Scores (0 to 100)</legend>
+
+          <p>
+            <label for="score-technical">Technical</label>
+            <input type="number" id="score-technical" name="score_technical"
+                   required min="0" max="100">
+          </p>
+
+          <p>
+            <label for="score-problem">Problem Solving</label>
+            <input type="number" id="score-problem" name="score_problem"
+                   required min="0" max="100">
+          </p>
+
+          <p>
+            <label for="score-communication">Communication</label>
+            <input type="number" id="score-communication" name="score_communication"
+                   required min="0" max="100">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Recommendation</legend>
+
+          <p>
+            <input type="radio" id="rec-passed" name="recommendation" value="passed" required>
+            <label for="rec-passed">Pass</label>
+          </p>
+          <p>
+            <input type="radio" id="rec-review" name="recommendation" value="review">
+            <label for="rec-review">Needs review</label>
+          </p>
+          <p>
+            <input type="radio" id="rec-improve" name="recommendation" value="improve">
+            <label for="rec-improve">Needs improvement</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comments</legend>
+
+          <p>
+            <label for="comments">Evaluation Notes</label>
+            <textarea id="comments" name="comments" rows="5"
+                      required minlength="20" maxlength="500"></textarea>
+          </p>
+        </fieldset>
+
+        <p class="form-actions">
+          <button type="submit">Submit Evaluation</button>
+          <button type="reset">Reset</button>
+        </p>
+
+      </form>
+    </section>
+
+    <aside class="feed" aria-labelledby="feed-title">
+      <h2 id="feed-title">Recent Activity</h2>
+      <ol>
+        <li>
+          <time datetime="2026-11-12T09:30">09:30</time>
+          <p>Lina Haddad passed the backend evaluation.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-12T10:15">10:15</time>
+          <p>Omar Nasser passed the frontend evaluation.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-12T11:00">11:00</time>
+          <p>Sara Khalil moved to final review.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-12T11:45">11:45</time>
+          <p>Follow-up session scheduled for Yousef Amer.</p>
+        </li>
+      </ol>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ProGineer Technologies. Frontend Engineering Track.</p>
+    <address>
+      Contact: <a href="mailto:training@progineer.example">training@progineer.example</a>
+    </address>
+  </footer>
+
+  <section class="modal" id="candidate-lina" role="dialog" aria-modal="true" aria-labelledby="modal-lina-title">
+    <article class="modal-content">
+      <header>
+        <h2 id="modal-lina-title">Lina Haddad</h2>
+        <p>Backend Engineering</p>
+      </header>
+      <a class="modal-close" href="#trainees">Close</a>
+      <dl>
+        <dt>Technical</dt>
+        <dd>90</dd>
+        <dt>Problem solving</dt>
+        <dd>85</dd>
+        <dt>Communication</dt>
+        <dd>88</dd>
+        <dt>Overall</dt>
+        <dd>88 / 100</dd>
+        <dt>Status</dt>
+        <dd>Passed</dd>
+        <dt>Reviewer</dt>
+        <dd>Rami Odeh</dd>
+      </dl>
+      <p>Strong grasp of API design and database modelling. Communicates trade-offs clearly.</p>
+    </article>
+  </section>
+
+  <section class="modal" id="candidate-omar" role="dialog" aria-modal="true" aria-labelledby="modal-omar-title">
+    <article class="modal-content">
+      <header>
+        <h2 id="modal-omar-title">Omar Nasser</h2>
+        <p>Frontend Engineering</p>
+      </header>
+      <a class="modal-close" href="#trainees">Close</a>
+      <dl>
+        <dt>Technical</dt>
+        <dd>82</dd>
+        <dt>Problem solving</dt>
+        <dd>78</dd>
+        <dt>Communication</dt>
+        <dd>80</dd>
+        <dt>Overall</dt>
+        <dd>80 / 100</dd>
+        <dt>Status</dt>
+        <dd>Passed</dd>
+        <dt>Reviewer</dt>
+        <dd>Dana Rashid</dd>
+      </dl>
+      <p>Solid component structure and responsive layout work. Should deepen accessibility testing.</p>
+    </article>
+  </section>
+
+  <section class="modal" id="candidate-sara" role="dialog" aria-modal="true" aria-labelledby="modal-sara-title">
+    <article class="modal-content">
+      <header>
+        <h2 id="modal-sara-title">Sara Khalil</h2>
+        <p>Quality Assurance</p>
+      </header>
+      <a class="modal-close" href="#trainees">Close</a>
+      <dl>
+        <dt>Technical</dt>
+        <dd>70</dd>
+        <dt>Problem solving</dt>
+        <dd>74</dd>
+        <dt>Communication</dt>
+        <dd>76</dd>
+        <dt>Overall</dt>
+        <dd>73 / 100</dd>
+        <dt>Status</dt>
+        <dd>In review</dd>
+        <dt>Reviewer</dt>
+        <dd>Rami Odeh</dd>
+      </dl>
+      <p>Good test design instincts. Final review is pending on automation coverage.</p>
+    </article>
+  </section>
+
+  <section class="modal" id="candidate-yousef" role="dialog" aria-modal="true" aria-labelledby="modal-yousef-title">
+    <article class="modal-content">
+      <header>
+        <h2 id="modal-yousef-title">Yousef Amer</h2>
+        <p>Backend Engineering</p>
+      </header>
+      <a class="modal-close" href="#trainees">Close</a>
+      <dl>
+        <dt>Technical</dt>
+        <dd>60</dd>
+        <dt>Problem solving</dt>
+        <dd>66</dd>
+        <dt>Communication</dt>
+        <dd>64</dd>
+        <dt>Overall</dt>
+        <dd>63 / 100</dd>
+        <dt>Status</dt>
+        <dd>Needs improvement</dd>
+        <dt>Reviewer</dt>
+        <dd>Dana Rashid</dd>
+      </dl>
+      <p>Needs more practice with core concepts. A follow-up session is scheduled.</p>
+    </article>
+  </section>
+
+</body>
+</html>
