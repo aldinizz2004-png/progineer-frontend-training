@@ -394,3 +394,89 @@ button:hover {
 .form-actions button + button {
   margin-left: 0.5rem;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(27, 36, 48, 0.75);
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(90%, 480px);
+  max-height: 90vh;
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-top: 6px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+  transform: translate(-50%, -50%);
+}
+
+.modal-content header {
+  margin-bottom: 1rem;
+  padding-right: 4.5rem;
+}
+
+.modal-content header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #ffffff;
+  background: var(--ink);
+}
+
+.modal-content dl {
+  margin: 0 0 1rem;
+}
+
+.modal-content dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.modal-content dd {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+footer {
+  padding: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  background: var(--ink);
+}
+
+footer p {
+  margin: 0 0 0.25rem;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer a {
+  color: #ffffff;
+}
