@@ -90,3 +90,158 @@ a:hover {
 .site-header nav a:hover {
   border-bottom-color: var(--accent);
 }
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.sidebar,
+.feed,
+main > section {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.sidebar dl {
+  margin: 0;
+}
+
+.sidebar dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.sidebar dd {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.feed ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feed li {
+  padding: 0.6rem 0.75rem;
+}
+
+.feed li:nth-child(odd) {
+  background: var(--band);
+}
+
+.feed time {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.feed li p {
+  margin: 0;
+}
+
+.candidate-card {
+  position: relative;
+  max-width: 480px;
+  margin: 0 0 1.25rem;
+  padding: 2.75rem 1.25rem 1.25rem;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.candidate-card:hover {
+  border-color: var(--accent);
+}
+
+.candidate-card[data-status="passed"] {
+  border-top: 6px solid var(--passed);
+}
+
+.candidate-card[data-status="review"] {
+  border-top: 6px solid var(--review);
+}
+
+.candidate-card[data-status="improve"] {
+  border-top: 6px solid var(--improve);
+}
+
+.candidate-card header {
+  margin-bottom: 0.75rem;
+}
+
+.candidate-card h3 {
+  margin: 0;
+}
+
+.candidate-card header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.candidate-card dl {
+  margin: 0 0 1rem;
+}
+
+.candidate-card dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.candidate-card dd {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  margin: 0;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge[data-status="passed"] {
+  background: var(--passed);
+}
+
+.badge[data-status="review"] {
+  background: var(--review);
+}
+
+.badge[data-status="improve"] {
+  background: var(--improve);
+}
+
+a[href^="#candidate-"] {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--link);
+}
+
+a[href^="#candidate-"]:hover {
+  background: var(--ink);
+}
