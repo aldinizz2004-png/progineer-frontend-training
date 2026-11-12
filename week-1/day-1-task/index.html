@@ -96,6 +96,53 @@
       </table>
     </section>
 
+    <section id="application-form" aria-labelledby="form-title">
+      <h2 id="form-title">Job Application Form</h2>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <p>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full_name"
+                   required minlength="3" maxlength="60"
+                   pattern="[A-Za-z\s'\-]{3,60}"
+                   title="Letters, spaces, apostrophes and hyphens only (3 to 60 characters)"
+                   autocomplete="name">
+          </p>
+
+          <p>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   required autocomplete="email">
+          </p>
+
+          <p>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   required minlength="9" maxlength="15"
+                   pattern="\+?[0-9]{9,15}"
+                   title="Digits only, optional leading + (9 to 15 digits)"
+                   autocomplete="tel">
+          </p>
+
+          <p>
+            <label for="birth-date">Date of Birth</label>
+            <input type="date" id="birth-date" name="birth_date"
+                   required min="1960-01-01" max="2008-12-31">
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Submit Application</button>
+          <button type="reset">Reset Form</button>
+        </p>
+
+      </form>
+    </section>
+
   </main>
 
   <footer>
